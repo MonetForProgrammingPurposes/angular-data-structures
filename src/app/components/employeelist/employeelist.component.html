@@ -1,0 +1,23 @@
+<div class="employee-list">
+    <h2>Employee List</h2>
+  
+    <input 
+      type="text" 
+      [(ngModel)]="searchQuery" 
+      placeholder="Search employees..." 
+      class="search-input" 
+    />
+  
+    <ul>
+      <li *ngFor="let employee of filteredEmployees">
+        <h3 (click)="viewDetails(employee)">{{ employee.name }}</h3>
+        <p>Position: {{ employee.position }}</p>
+        <p>Department: {{ employee.department }}</p>
+      </li>
+    </ul>
+  
+    <div *ngIf="filteredEmployees.length === 0">
+      <p>No employees found.</p>
+    </div>
+  </div>
+  

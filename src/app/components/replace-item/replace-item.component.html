@@ -1,0 +1,20 @@
+<div class="replace-item-container">
+    <h2>Replace Item in List</h2>
+    
+    <input type="text" [(ngModel)]="newItem" placeholder="Enter new item" />
+    <button (click)="addItem()">Add Item</button>
+    
+    <ul>
+      <li *ngFor="let item of items; let i = index">
+        {{ item }} <!-- Display the item name -->
+        <button (click)="selectItem(i)">Replace</button> <!-- Select item to replace -->
+        <button (click)="removeItem(i)">Remove</button>
+      </li>
+    </ul>
+  
+    <div *ngIf="itemIndex !== null">
+      <h3>Replacing: {{ itemToReplace }}</h3>
+      <button (click)="replaceItem()">Confirm Replacement</button>
+    </div>
+  </div>
+  

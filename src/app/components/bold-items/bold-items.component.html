@@ -1,0 +1,14 @@
+<div class="bold-items">
+    <h2>Bold Items List</h2>
+  
+    <ul>
+      <li *ngFor="let item of items">
+        <strong>{{ item }}</strong> <!-- Display each item in bold -->
+      </li>
+    </ul>
+  
+    <div *ngIf="items.length === 0">
+      <p>No items in the list.</p>
+    </div>
+  </div>
+  

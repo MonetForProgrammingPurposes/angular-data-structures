@@ -1,0 +1,15 @@
+<div class="strike-through-list-container">
+    <h2>Strike Through List</h2>
+    
+    <input type="text" [(ngModel)]="newItem" placeholder="Enter new item" />
+    <button (click)="addItem()">Add Item</button>
+    
+    <ul>
+      <li *ngFor="let item of items; let i = index">
+        <span [ngClass]="{ 'strikethrough': item.completed }">{{ item.name }}</span> <!-- Show item name with strikethrough -->
+        <button (click)="toggleItem(i)">Toggle Strike</button>
+        <button (click)="removeItem(i)">Remove</button>
+      </li>
+    </ul>
+  </div>
+  

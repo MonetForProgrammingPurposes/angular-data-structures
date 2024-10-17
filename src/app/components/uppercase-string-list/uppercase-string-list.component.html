@@ -1,0 +1,14 @@
+<div class="uppercase-string-list-container">
+    <h2>Uppercase String List</h2>
+    
+    <input type="text" [(ngModel)]="newString" placeholder="Enter new string" />
+    <button (click)="addString()">Add String</button>
+    
+    <ul>
+      <li *ngFor="let str of strings; let i = index">
+        {{ str }} <!-- Display each added string in uppercase -->
+        <button (click)="removeString(i)">Remove</button>
+      </li>
+    </ul>
+  </div>
+  

@@ -1,0 +1,14 @@
+<div class="highlight-matching-list">
+    <h2>Highlight Matching Items</h2>
+  
+    <!-- Input field for the search term -->
+    <input type="text" [(ngModel)]="searchTerm" placeholder="Search for a list item..." />
+  
+    <!-- List of items with highlighting for matches -->
+    <ul>
+      <li *ngFor="let item of items" [class.highlight]="isMatch(item)">
+        {{ item }}
+      </li>
+    </ul>
+  </div>
+  

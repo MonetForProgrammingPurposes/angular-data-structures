@@ -1,0 +1,12 @@
+<div class="grouped-sorted-list">
+    <h2>Grouped and Sorted List</h2>
+  
+    <!-- Loop through the sorted groups and their items -->
+    <div *ngFor="let group of getSortedGroups()">
+      <h3>{{ group.category }}</h3>
+      <ul>
+        <li *ngFor="let item of group.items">{{ item }}</li>
+      </ul>
+    </div>
+  </div>
+  

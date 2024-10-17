@@ -1,0 +1,15 @@
+<div class="product-list-container">
+    <h2>Product List</h2>
+    
+    <input type="text" [(ngModel)]="newProductName" placeholder="Enter product name" />
+    <input type="number" [(ngModel)]="newProductPrice" placeholder="Enter product price" />
+    <button (click)="addProduct()">Add Product</button>
+    
+    <ul>
+      <li *ngFor="let product of products; let i = index">
+        {{ product.name }} - ${{ product.price.toFixed(2) }} 
+        <button (click)="removeProduct(i)">Remove</button>
+      </li>
+    </ul>
+  </div>
+  

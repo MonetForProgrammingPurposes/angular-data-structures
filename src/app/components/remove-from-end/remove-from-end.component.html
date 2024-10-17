@@ -1,0 +1,12 @@
+<div class="remove-from-end-container">
+    <h2>Remove Last Item from List</h2>
+    
+    <input type="text" [(ngModel)]="newItem" placeholder="Enter new item" />
+    <button (click)="addItem()">Add Item</button>
+    <button (click)="removeLastItem()" [disabled]="items.length === 0">Remove Last Item</button>
+    
+    <ul>
+      <li *ngFor="let item of items">{{ item }}</li>
+    </ul>
+  </div>
+  

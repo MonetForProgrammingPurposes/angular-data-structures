@@ -1,0 +1,14 @@
+<div class="string-list-container">
+    <h2>String List</h2>
+    
+    <input type="text" [(ngModel)]="newString" placeholder="Enter new string" />
+    <button (click)="addString()">Add String</button>
+    
+    <ul>
+      <li *ngFor="let str of strings; let i = index">
+        {{ str }} <!-- Display each added string -->
+        <button (click)="removeString(i)">Remove</button>
+      </li>
+    </ul>
+  </div>
+  

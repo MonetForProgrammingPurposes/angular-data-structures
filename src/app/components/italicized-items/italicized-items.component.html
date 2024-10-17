@@ -1,0 +1,16 @@
+<div class="italicized-items">
+    <h2>Italicized List</h2>
+  
+    <!-- Input field to add new items -->
+    <input type="text" #newItemInput placeholder="Add new item" />
+    <button (click)="addItem(newItemInput.value); newItemInput.value = '';">Add</button>
+  
+    <!-- List of italicized items -->
+    <ul>
+      <li *ngFor="let item of items; let i = index" class="italic-item">
+        {{ item }}
+        <button (click)="removeItem(i)">Remove</button>
+      </li>
+    </ul>
+  </div>
+  

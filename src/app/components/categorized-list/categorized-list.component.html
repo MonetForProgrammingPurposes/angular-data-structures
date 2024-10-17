@@ -1,0 +1,15 @@
+<div class="categorized-list">
+    <h2>Categorized List</h2>
+  
+    <div *ngFor="let category of getGroupedItems() | keyvalue">
+      <h3>{{ category.key }}</h3>
+      <ul>
+        <li *ngFor="let item of category.value">{{ item.name }}</li>
+      </ul>
+    </div>
+  
+    <div *ngIf="items.length === 0">
+      <p>No items in the list.</p>
+    </div>
+  </div>
+  

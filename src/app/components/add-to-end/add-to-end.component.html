@@ -1,0 +1,22 @@
+<div class="add-to-end">
+    <h2>Add Item to End of List</h2>
+  
+    <input 
+      type="text" 
+      [(ngModel)]="newItem" 
+      placeholder="Enter new item" 
+      class="item-input" 
+    />
+    <button (click)="addItem()" class="add-button">Add</button>
+  
+    <ul>
+      <li *ngFor="let item of items" class="list-item">
+        {{ item }}
+      </li>
+    </ul>
+  
+    <div *ngIf="items.length === 0">
+      <p>No items in the list.</p>
+    </div>
+  </div>
+  

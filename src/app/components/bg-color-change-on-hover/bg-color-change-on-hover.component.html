@@ -1,0 +1,14 @@
+<div class="bg-color-change-on-hover">
+    <h2>Background Color Change on Hover</h2>
+  
+    <ul>
+      <li *ngFor="let item of items" class="hover-item">
+        {{ item }}
+      </li>
+    </ul>
+  
+    <div *ngIf="items.length === 0">
+      <p>No items in the list.</p>
+    </div>
+  </div>
+  

@@ -1,0 +1,12 @@
+<div class="bulleted-list">
+    <h2>Bulleted List</h2>
+  
+    <ul>
+      <li *ngFor="let item of items">{{ item }}</li>
+    </ul>
+  
+    <div *ngIf="items.length === 0">
+      <p>No items in the list.</p>
+    </div>
+  </div>
+  

@@ -1,0 +1,14 @@
+<div class="live-update-list">
+    <h2>Live Update List</h2>
+    
+    <input type="text" [(ngModel)]="newItem" placeholder="Add new item" />
+    <button (click)="addItem()">Add</button>
+  
+    <ul>
+      <li *ngFor="let item of items; let i = index">
+        {{ item }}
+        <button (click)="removeItem(i)">Remove</button>
+      </li>
+    </ul>
+  </div>
+  

@@ -1,0 +1,14 @@
+<div class="animated-list">
+    <h2>Animated List</h2>
+  
+    <ul>
+      <li *ngFor="let item of items" @fadeIn class="list-item">
+        {{ item }}
+      </li>
+    </ul>
+  
+    <div *ngIf="items.length === 0">
+      <p>No items in the list.</p>
+    </div>
+  </div>
+  

@@ -1,0 +1,14 @@
+<div class="sortable-list-container">
+    <h2>Sortable List</h2>
+    
+    <input type="text" [(ngModel)]="newItem" placeholder="Enter new item" />
+    <button (click)="addItem()">Add Item</button>
+    
+    <ul>
+      <li *ngFor="let item of items; let i = index">
+        {{ item }} <!-- Display the item name -->
+        <button (click)="removeItem(i)">Remove</button>
+      </li>
+    </ul>
+  </div>
+  

@@ -1,0 +1,10 @@
+<div class="list-with-tooltips">
+    <h2>List with Tooltips</h2>
+  
+    <ul>
+      <li *ngFor="let item of items" [attr.title]="item.tooltip">
+        {{ item.name }}
+      </li>
+    </ul>
+  </div>
+  

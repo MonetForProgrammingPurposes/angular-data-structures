@@ -1,0 +1,14 @@
+<div class="lowercase-stringlist">
+    <h2>Lowercase String List</h2>
+    <input type="text" [(ngModel)]="newString" placeholder="Add new string" />
+    <button (click)="addString()">Add</button>
+    <button (click)="convertToLowercase()">Convert to Lowercase</button>
+  
+    <ul>
+      <li *ngFor="let item of stringList; let i = index">
+        {{ item }}
+        <button (click)="removeString(i)">Remove</button>
+      </li>
+    </ul>
+  </div>
+  

@@ -1,0 +1,14 @@
+<div class="pagination-list-container">
+    <h2>Paginated List</h2>
+    
+    <ul>
+      <li *ngFor="let item of paginatedItems">{{ item }}</li>
+    </ul>
+    
+    <div class="pagination-controls">
+      <button (click)="changePage(currentPage - 1)" [disabled]="currentPage === 1">Previous</button>
+      <span>Page {{ currentPage }} of {{ totalPages }}</span>
+      <button (click)="changePage(currentPage + 1)" [disabled]="currentPage === totalPages">Next</button>
+    </div>
+  </div>
+  

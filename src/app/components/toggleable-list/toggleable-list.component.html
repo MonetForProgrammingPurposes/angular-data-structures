@@ -1,0 +1,17 @@
+<div class="toggleable-list-container">
+    <h2>Toggleable List</h2>
+    
+    <input type="text" [(ngModel)]="newString" placeholder="Enter new string" />
+    <button (click)="addString()">Add String</button>
+    
+    <ul>
+      <li *ngFor="let item of strings; let i = index">
+        <button (click)="toggleVisibility(i)">
+          {{ item.isVisible ? 'Hide' : 'Show' }} <!-- Toggle button text -->
+        </button>
+        <span *ngIf="item.isVisible">{{ item.value }}</span> <!-- Display string if visible -->
+        <button (click)="removeString(i)">Remove</button>
+      </li>
+    </ul>
+  </div>
+  

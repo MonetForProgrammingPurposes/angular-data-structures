@@ -1,0 +1,24 @@
+<div class="nested-list-container">
+    <h2>Nested List</h2>
+    
+    <ul>
+      <ng-container *ngFor="let item of nestedItems">
+        <li>
+          {{ item.name }} <!-- Display the item name -->
+          <ul *ngIf="item.children"> <!-- Check if there are children -->
+            <ng-container *ngFor="let child of item.children">
+              <li>
+                {{ child.name }} <!-- Display child item name -->
+                <ul *ngIf="child.children"> <!-- Check for nested children -->
+                  <ng-container *ngFor="let subChild of child.children">
+                    <li>{{ subChild.name }}</li> <!-- Display sub-child item -->
+                  </ng-container>
+                </ul>
+              </li>
+            </ng-container>
+          </ul>
+        </li>
+      </ng-container>
+    </ul>
+  </div>
+  

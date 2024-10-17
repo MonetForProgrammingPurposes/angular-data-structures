@@ -1,0 +1,13 @@
+<div class="list-with-duplicates">
+    <h2>List with Duplicates</h2>
+  
+    <ul>
+      <li *ngFor="let item of items">
+        {{ item }}
+      </li>
+    </ul>
+  
+    <!-- Button to remove duplicates from the list -->
+    <button (click)="removeDuplicates()">Remove Duplicates</button>
+  </div>
+  

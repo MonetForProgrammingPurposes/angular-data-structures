@@ -1,0 +1,15 @@
+<div class="click-count-list">
+    <h2>Click Count List</h2>
+  
+    <ul>
+      <li *ngFor="let item of items; let i = index">
+        {{ item.name }} - Clicks: {{ item.clickCount }}
+        <button (click)="incrementClickCount(i)">Click Me</button>
+      </li>
+    </ul>
+  
+    <div *ngIf="items.length === 0">
+      <p>No items in the list.</p>
+    </div>
+  </div>
+  

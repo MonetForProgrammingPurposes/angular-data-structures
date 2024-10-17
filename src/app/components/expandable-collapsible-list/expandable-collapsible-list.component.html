@@ -1,0 +1,13 @@
+<div class="expandable-collapsible-list">
+    <h2>Expandable Collapsible List</h2>
+  
+    <div *ngFor="let item of items">
+      <div class="item">
+        <h3 (click)="toggleExpand(item)">{{ item.title }}</h3>
+        <div class="details" *ngIf="item.isExpanded">
+          <p>{{ item.details }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  

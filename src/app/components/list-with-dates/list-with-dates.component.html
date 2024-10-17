@@ -1,0 +1,15 @@
+<div class="list-with-dates">
+    <h2>List with Dates</h2>
+  
+    <input type="text" [(ngModel)]="newItem" placeholder="Add new item" />
+    <button (click)="addItem()">Add</button>
+    <button (click)="sortByDate()">Sort by Date</button>
+  
+    <ul>
+      <li *ngFor="let entry of itemsWithDates; let i = index">
+        {{ entry.item }} - {{ entry.date | date: 'medium' }}
+        <button (click)="removeItem(i)">Remove</button>
+      </li>
+    </ul>
+  </div>
+  

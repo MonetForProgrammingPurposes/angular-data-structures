@@ -1,0 +1,12 @@
+<div class="object-list-container">
+    <h2>Object List</h2>
+    
+    <ul>
+      <li *ngFor="let obj of objects">
+        <h3>{{ obj.name }}</h3>
+        <p><strong>ID:</strong> {{ obj.id }}</p>
+        <p><strong>Description:</strong> {{ obj.description }}</p>
+      </li>
+    </ul>
+  </div>
+  

@@ -1,0 +1,14 @@
+<div class="load-more-list">
+    <h2>Load More List</h2>
+  
+    <ul>
+      <li *ngFor="let item of displayedItems">
+        {{ item }}
+      </li>
+    </ul>
+  
+    <button (click)="loadMore()" *ngIf="displayedItems.length < allItems.length">
+      Load More
+    </button>
+  </div>
+  

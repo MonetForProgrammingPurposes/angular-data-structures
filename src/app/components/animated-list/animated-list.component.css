@@ -1,0 +1,27 @@
+.animated-list {
+    max-width: 600px;
+    margin: 20px auto;
+    text-align: left;
+  }
+  
+  h2 {
+    text-align: center;
+  }
+  
+  ul {
+    list-style-type: disc; /* Bulleted style */
+    padding-left: 20px; /* Indentation for bullets */
+  }
+  
+  .list-item {
+    padding: 10px 15px; /* Padding for each item */
+    margin: 5px 0; /* Margin between items */
+    background-color: #f9f9f9; /* Light background color */
+    border-radius: 4px; /* Rounded corners */
+    transition: background-color 0.3s; /* Smooth transition for background color */
+  }
+  
+  .list-item:hover {
+    background-color: #e0e0e0; /* Background color on hover */
+  }
+  

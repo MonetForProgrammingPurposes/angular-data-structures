@@ -1,0 +1,12 @@
+<div class="remove-from-beginning-container">
+    <h2>Remove First Item from List</h2>
+    
+    <input type="text" [(ngModel)]="newItem" placeholder="Enter new item" />
+    <button (click)="addItem()">Add Item</button>
+    <button (click)="removeFirstItem()" [disabled]="items.length === 0">Remove First Item</button>
+    
+    <ul>
+      <li *ngFor="let item of items">{{ item }}</li>
+    </ul>
+  </div>
+  

@@ -1,0 +1,25 @@
+<div class="editable-list">
+    <h2>Editable List</h2>
+  
+    <ul>
+      <li *ngFor="let item of items; let i = index">
+        <span *ngIf="editedItemIndex !== i">{{ item }}</span>
+  
+        <input 
+          *ngIf="editedItemIndex === i" 
+          [(ngModel)]="editedItemValue" 
+          (blur)="saveItem(i)" 
+          placeholder="Edit item" 
+        />
+  
+        <button *ngIf="editedItemIndex !== i" (click)="editItem(i)">Edit</button>
+        <button *ngIf="editedItemIndex === i" (click)="saveItem(i)">Save</button>
+        <button *ngIf="editedItemIndex === i" (click)="cancelEdit()">Cancel</button>
+      </li>
+    </ul>
+  
+    <div *ngIf="items.length === 0">
+      <p>No items in the list.</p>
+    </div>
+  </div>
+  

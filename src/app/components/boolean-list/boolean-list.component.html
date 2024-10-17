@@ -1,0 +1,14 @@
+<div class="boolean-list">
+    <h2>Boolean List</h2>
+  
+    <ul>
+      <li *ngFor="let value of booleanValues">
+        {{ getReadableValue(value) }}
+      </li>
+    </ul>
+  
+    <div *ngIf="booleanValues.length === 0">
+      <p>No boolean values in the list.</p>
+    </div>
+  </div>
+  

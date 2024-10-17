@@ -1,0 +1,11 @@
+<div class="lazy-loading-list">
+    <h2>Lazy Loading List</h2>
+  
+    <ul>
+      <li *ngFor="let item of items">{{ item }}</li>
+    </ul>
+  
+    <!-- Anchor to trigger lazy loading -->
+    <div #scrollAnchor class="scroll-anchor"></div>
+  </div>
+  

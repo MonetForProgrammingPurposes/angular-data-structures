@@ -1,0 +1,20 @@
+<div class="image-list">
+    <h2>Image List</h2>
+  
+    <!-- Input fields to add a new image -->
+    <input type="text" #newUrl placeholder="Image URL" />
+    <input type="text" #newAlt placeholder="Alt text" />
+    <input type="text" #newDescription placeholder="Description" />
+    <button (click)="addImage(newUrl.value, newAlt.value, newDescription.value); 
+                     newUrl.value = ''; newAlt.value = ''; newDescription.value = '';">
+      Add Image
+    </button>
+  
+    <!-- Display list of images -->
+    <div class="image-container" *ngFor="let image of images; let i = index">
+      <img [src]="image.url" [alt]="image.alt" />
+      <p>{{ image.description }}</p>
+      <button (click)="removeImage(i)">Remove</button>
+    </div>
+  </div>
+  
